@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Kalam&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1522;
+}
+
+.palabras {
+    display: flex;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Bitter", serif;
+}
+
+.corazon {
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: corazon 0.6s linear infinite;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding: 70px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    font-family: "Bitter", serif;
+}
+
+.titulo {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes corazon {
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.corazon:before {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px #f20044;
+}
+
+.corazon:after {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px #f20044;
+}
